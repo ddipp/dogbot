@@ -11,4 +11,10 @@ GPIO.setup(r1, GPIO.OUT)
 GPIO.output(r1, GPIO.LOW)
 time.sleep(1)
 GPIO.output(r1, GPIO.HIGH)
+
+GPIO.setup(r2, GPIO.OUT)
+GPIO.output(r2, GPIO.LOW)
+time.sleep(1)
+GPIO.output(r2, GPIO.HIGH)
+
 GPIO.cleanup()
