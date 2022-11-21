@@ -1,0 +1,6 @@
+.venv/
+*.sublime-workspace
+# *.sublime-project
+__pycache__
+bot/productionconfig.py
+bot/config.py
