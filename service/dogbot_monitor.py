@@ -3,12 +3,17 @@
 import RPi.GPIO as GPIO
 import time
 
+def my_callback(channel):
+    print("Rising ", channel)
+
 r1, r2 = 17, 18
 b1 = 23
 
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(b1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+GPIO.add_event_detect(b1, GPIO.RISING, callback=my_callback)
 
 while True:
 
