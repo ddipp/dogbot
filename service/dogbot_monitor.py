@@ -4,7 +4,7 @@ import RPi.GPIO as GPIO
 import time
 
 def my_callback(channel):
-    print("Rising ", channel)
+    print("Rising ", channel, "button state: ", GPIO.input(channel))
 
 r1, r2 = 17, 18
 b1 = 23
