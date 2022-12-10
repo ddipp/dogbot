@@ -1,3 +1,2 @@
-aioredis
 aiogram
 rpi.gpio
