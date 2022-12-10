@@ -15,19 +15,26 @@ GPIO.setup(b1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 GPIO.add_event_detect(b1, GPIO.RISING, callback=my_callback, bouncetime=300)
 
-while True:
+try:
+    while True:
+        time.sleep(2)
+        print('.')
+except KeyboardInterrupt:
+    GPIO.cleanup()
 
-    buttonState = GPIO.input(b1)
-    print('b1 = ', buttonState)
+# while True:
 
-    GPIO.setup(r1, GPIO.OUT)
-    GPIO.output(r1, GPIO.LOW)
-    time.sleep(1)
-    GPIO.output(r1, GPIO.HIGH)
+#     buttonState = GPIO.input(b1)
+#     print('b1 = ', buttonState)
 
-    GPIO.setup(r2, GPIO.OUT)
-    GPIO.output(r2, GPIO.LOW)
-    time.sleep(1)
-    GPIO.output(r2, GPIO.HIGH)
+#     GPIO.setup(r1, GPIO.OUT)
+#     GPIO.output(r1, GPIO.LOW)
+#     time.sleep(1)
+#     GPIO.output(r1, GPIO.HIGH)
+
+#     GPIO.setup(r2, GPIO.OUT)
+#     GPIO.output(r2, GPIO.LOW)
+#     time.sleep(1)
+#     GPIO.output(r2, GPIO.HIGH)
 
 GPIO.cleanup()
