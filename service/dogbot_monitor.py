@@ -13,7 +13,7 @@ GPIO.setup(b1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 while True:
 
     buttonState = GPIO.input(b1)
-    print('b1 = ' buttonState)
+    print('b1 = ', buttonState)
 
     GPIO.setup(r1, GPIO.OUT)
     GPIO.output(r1, GPIO.LOW)
